@@ -14,9 +14,23 @@ namespace NodeUtil
 
         public NodeConnection(IPAddress TargetAddress)
         {
+            Connection.BeginConnect(TargetAddress, 6100, Callback, Connection);
+        }
+
+        public void HeartBeat()
+        {
+
+        }
+        
+        public void Send()
+        {
 
         }
 
+        public static void Callback(IAsyncResult result)
+        {
+
+        }
 
     }
 }
